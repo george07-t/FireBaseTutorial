@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "910412724718",
+    "project_id": "loginexample-64e0c",
+    "storage_bucket": "loginexample-64e0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910412724718:android:bea172cfc4b146344a36ff",
+        "android_client_info": {
+          "package_name": "com.example.loginexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910412724718-00liu9vosqkeqkgg2fnvtf5doovobj67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_UaRH5B3LB67NHnrvVKRvjmHyYF8edAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910412724718-00liu9vosqkeqkgg2fnvtf5doovobj67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

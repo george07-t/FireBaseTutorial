@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#22b2ff"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_margin="20dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/lged1"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:layout_margin="20dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/lged2"
+        android:textColor="@color/white"
+        android:textColorHint="#ffffff"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+    <Button
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="log in"
+        android:id="@+id/lgb1"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lgt1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="Are you not registered? sign up"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/lgp1"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

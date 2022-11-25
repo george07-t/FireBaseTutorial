@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:weightSum="3"
+    tools:context=".ImageUpload">
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:text="Choose Image"
+    android:id="@+id/cim1"
+    android:layout_marginTop="10dp"
+    android:layout_weight="0.25"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:hint="Enter a name of an image"
+        android:layout_marginTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:id="@+id/eim1"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="2"
+        android:layout_marginTop="20dp"
+        android:id="@+id/im1"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_weight="0.16"
+        android:layout_gravity="center"
+        android:id="@+id/pim1"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Save Image"
+        android:id="@+id/sim1"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.17"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Display Image"
+        android:id="@+id/dim1"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.17"/>
+
+
+
+</LinearLayout>
