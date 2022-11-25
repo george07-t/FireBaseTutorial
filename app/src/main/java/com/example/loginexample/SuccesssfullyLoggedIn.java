@@ -3,7 +3,11 @@ package com.example.loginexample;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,11 +26,14 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
     private Button saveid, loadid,imageid;
     private EditText nameid, ageid;
     DatabaseReference databaseReference;
+    private BroadcastReceiver broadcaster1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_successsfully_logged_in);
+        broadcaster1=new Broadcaster();
+        registerReceiver(broadcaster1,new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
         mauth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Students");
         saveid = (Button) findViewById(R.id.saveid);
@@ -69,6 +76,12 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(broadcaster1);
     }
 
     public void savadata() {
@@ -114,4 +127,5 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
             finish();
         }
     }
+
 }

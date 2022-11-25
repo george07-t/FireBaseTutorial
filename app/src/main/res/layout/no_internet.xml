@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="#ffe79e"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/inim1"
+        android:layout_width="190dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_not_interested_24" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="No Internet Connection"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:id="@+id/int1"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Refresh"
+        android:layout_margin="10dp"
+        android:id="@+id/inb1"/>
+</LinearLayout>
