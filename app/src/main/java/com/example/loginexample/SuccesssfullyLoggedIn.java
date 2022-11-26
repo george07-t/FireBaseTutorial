@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SuccesssfullyLoggedIn extends AppCompatActivity {
     FirebaseAuth mauth;
-    private Button saveid, loadid,imageid;
+    private Button saveid, loadid, imageid;
     private EditText nameid, ageid;
     DatabaseReference databaseReference;
     private BroadcastReceiver broadcaster1;
@@ -32,8 +32,8 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_successsfully_logged_in);
-        broadcaster1=new Broadcaster();
-        registerReceiver(broadcaster1,new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        broadcaster1 = new Broadcaster();
+        registerReceiver(broadcaster1, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
         mauth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Students");
         saveid = (Button) findViewById(R.id.saveid);
@@ -44,7 +44,7 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
         imageid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),ImageUpload.class);
+                Intent intent = new Intent(getApplicationContext(), ImageUpload.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +66,7 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent=new Intent(SuccesssfullyLoggedIn.this,LoadData.class);
+                    Intent intent = new Intent(SuccesssfullyLoggedIn.this, LoadData.class);
                     startActivity(intent);
                 } catch (Exception e) {
                     nameid.setError("No Data");
