@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class SuccesssfullyLoggedIn extends AppCompatActivity {
     FirebaseAuth mauth;
-    private Button saveid, loadid, imageid;
+    private Button saveid, loadid, imageid,labid;
     private EditText nameid, ageid;
     DatabaseReference databaseReference;
     private BroadcastReceiver broadcaster1;
@@ -37,10 +37,18 @@ public class SuccesssfullyLoggedIn extends AppCompatActivity {
         mauth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("Students");
         saveid = (Button) findViewById(R.id.saveid);
+        labid=(Button) findViewById(R.id.labid);
         loadid = (Button) findViewById(R.id.loadid);
         imageid = (Button) findViewById(R.id.imageid);
         nameid = (EditText) findViewById(R.id.nameid);
         ageid = (EditText) findViewById(R.id.ageid);
+        labid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(SuccesssfullyLoggedIn.this,Lab_Work.class);
+                startActivity(intent);
+            }
+        });
         imageid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
